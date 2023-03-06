@@ -78,8 +78,9 @@ resource "aws_sns_topic_subscription" "sns_notify_slack" {
 }
 
 module "lambda" {
-  source  = "terraform-aws-modules/lambda/aws"
-  version = "3.2.0"
+  # source  = "terraform-aws-modules/lambda/aws"
+  # version = "3.2.0"
+  source = "git@github.com:chtakahashi/terraform-aws-lambda.git?ref=378f3435fae52d85d88e61009ba953865b8378d4"
 
   create = var.create
 
